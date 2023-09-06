@@ -3,18 +3,17 @@ package TestCase;
 import Utility.BaseDriver;
 import Utility.Func;
 import org.junit.Assert;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-
+import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.List;
 
 public class AllTestCases extends BaseDriver {
 
- @Test(priority=1)
+    @Test(priority=1)
     public void E_BookPaymentProcessTest() {
        driver.get("https://www.e-junkie.com/wiki/demo");
 
