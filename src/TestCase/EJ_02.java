@@ -34,7 +34,6 @@ public class EJ_02 extends BaseDriver {
             Assert.assertTrue(error + " mesajı görüntülenmiyor!", errorMessage.isDisplayed());
         }
 
-        WaitAndClose();
     }
 
     }

@@ -1,4 +1,5 @@
 package TestCase;
+
 import Utility.BaseDriver;
 import Utility.Func;
 import org.junit.Assert;
@@ -7,17 +8,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 
 public class AllTestCases extends BaseDriver {
 
-    @Test
+ @Test(priority=1)
     public void E_BookPaymentProcessTest() {
-        driver.get("https://www.e-junkie.com/wiki/demo");
+       driver.get("https://www.e-junkie.com/wiki/demo");
 
         WebElement addToCartButton = driver.findElement(By.xpath("//a[text()='Add to Cart']"));
         addToCartButton.click();
@@ -36,16 +35,13 @@ public class AllTestCases extends BaseDriver {
             WebElement errorMessage = driver.findElement(By.xpath("//div[@id='SnackBar']/span"));
             Assert.assertTrue(error + " mesajı görüntülenmiyor!", errorMessage.isDisplayed());
         }
-        WaitAndClose();
+
     }
 
-    @Test
+    @Test(priority=2)
     public void CardPaymentConfirmationTest() {
 
-        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
-
         driver.get("https://www.e-junkie.com/wiki/demo/paypal");
-        driver.manage().window().maximize();
 
         WebElement addToCard= driver.findElement(By.xpath("//a[text()='Add to Cart']"));
         addToCard.click();
@@ -109,8 +105,6 @@ public class AllTestCases extends BaseDriver {
                         (By.xpath("//span[@class='green_text_margin']")));
 
         Assert.assertTrue(messageConfirm.getText().contains("is confirmed. Thank you!"));
-
-        WaitAndClose();
 
     }
 }

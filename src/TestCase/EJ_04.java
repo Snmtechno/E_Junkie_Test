@@ -6,20 +6,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
 
 
 public class EJ_04 extends BaseDriver {
     @Test
     public void CardPaymentConfirmationTest(){
 
-        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
-
         driver.get("https://www.e-junkie.com/wiki/demo/paypal");
-        driver.manage().window().maximize();
 
         WebElement addToCard= driver.findElement(By.xpath("//a[text()='Add to Cart']"));
         addToCard.click();
@@ -83,8 +77,6 @@ public class EJ_04 extends BaseDriver {
                         (By.xpath("//span[@class='green_text_margin']")));
 
         Assert.assertTrue(messageConfirm.getText().contains("is confirmed. Thank you!"));
-
-        WaitAndClose();
 
 
     }
