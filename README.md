@@ -17,8 +17,6 @@ TestNG : 6.14.3
 
 **Collaborators**
 **Sinem Yurdusever ** - GitHub: (https://github.com/Snmtechno)
-**Alperen Sanli ** - GitHub: (https://github.com/sanli-46)
 **Enes Buke ** - GitHub: (https://github.com/enesbuke)
-**Fatih Guvenc ** - GitHub: (https://github.com/fatih122133)
-**Murat Enginel ** - GitHub: (https://github.com/teknokolik)
+
 
