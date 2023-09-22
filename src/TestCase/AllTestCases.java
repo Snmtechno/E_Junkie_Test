@@ -34,12 +34,10 @@ public class AllTestCases extends BaseDriver {
             WebElement errorMessage = driver.findElement(By.xpath("//div[@id='SnackBar']/span"));
             Assert.assertTrue(error + " mesajı görüntülenmiyor!", errorMessage.isDisplayed());
         }
-
     }
 
     @Test(priority=2)
     public void CardPaymentConfirmationTest() {
-
         driver.get("https://www.e-junkie.com/wiki/demo/paypal");
 
         WebElement addToCard= driver.findElement(By.xpath("//a[text()='Add to Cart']"));
